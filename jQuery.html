@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <title>JQUERY ASSIGNMENT</title>
+
+    <script>
+    
+    $(document).ready(function(){
+
+        $('#hide').click(function(){
+            $('#hidep').hide()
+        });
+
+        $('#show').click(function(){
+            $('#secret').show()
+        });
+
+        $('#toggle').click(function(){
+            $('img').toggle()
+        });
+
+        $('#addclass').click(function(){
+            $('#classyp').addClass("classy")
+        });
+
+        var src = $('img').attr('src');
+        $('div').text(src);
+
+        console.log($('title').html());
+
+        console.log($('input').val());
+
+
+     })
+
+    
+    </script>
+
+    <style>
+        
+        .classy{
+            font-family:cursive;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Hide 🙈</h1>
+    <p id="hidep">Click the button to 🦊hide this paragraph forever (unless you refresh the page, of course).</p>
+    <button id="hide">Hide</button>
+
+    <h1>Show 👀</h1>
+    <p>Click the button to show a hidden button.</p>
+    <button id="show">Show Me Your Secrets</button>
+    <button id="secret" style="display:none"; >Secret Button!🌈</button>
+
+    <h1>Toggle 🕹</h1>
+    <p id="ptog">Click the button to toggle current mood.</p>
+    <img src="https://media.makeameme.org/created/wut-5a0265.jpg" style="display:none; height:200px; width: 400px;">
+    <button id="toggle">Toggle</button>
+    
+    <h1>Add Class 💃🏼</h1>
+    <p id="classyp">Click this button to add a new class to this paragraph.</p>
+    <button id="addclass">AddClass</button>
+
+    <form>
+        <p>How You Doin'?</p>
+        <input type="checkbox" name="feeling" value="GREAT">GREAT!
+    </form>
+    
+    <p style="background-color: lightblue; padding: 10px;">The URL of the 'Wut' image is: <div></div></p>
+</body>
+</html>
