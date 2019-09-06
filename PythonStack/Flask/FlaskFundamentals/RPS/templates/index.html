@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Papaer Scissors</title>
+</head>
+<style>
+
+    *{
+        margin: 0px;
+        padding: 0px
+    }
+
+    .box{
+        width: auto;
+        padding: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display:inline-block;
+        margin: 10px;
+    }
+
+    #rock{
+        background-image: url({{ url_for('static', filename='rock.jpeg') }});
+    }
+
+    #paper{
+        background-image: url({{ url_for('static', filename='paper.jpeg') }});
+    }
+
+    #scissors{
+        background-image: url({{ url_for('static', filename='scissors.jpg') }});
+    }
+
+    #wrapper{
+        padding-top: 30px;
+        margin: auto;
+        vertical-align: middle;
+        width: fit-content;
+    }
+
+
+
+</style>
+<body>
+
+<div id="wrapper">
+    
+<form action="/counter" method="post" >
+    <div class="box" id="rock">
+        <label for="rock">ROCK</label>
+        <input id ="rock" type="radio" name="choice" value="rock">
+    </div>
+
+    <div class="box" id="paper">
+        <label for="paper">PAPER</label>
+        <input id ="paper" type="radio" name="choice" value="paper"> 
+    </div>
+
+    <div class="box" id="scissors">
+        <label for="scissors">SCISSORS</label>
+        <input id ="scissors" type="radio" name="choice" value="scissors"> 
+    </div>
+
+    <input type="submit" value="FIGHT!!"> 
+
+</form>
+
+</div>
+
+</body>
+</html>
