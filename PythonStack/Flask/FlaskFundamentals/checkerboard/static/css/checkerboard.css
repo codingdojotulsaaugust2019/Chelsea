@@ -1,0 +1,18 @@
+
+* {
+    padding:0px;
+    margin: 0px;
+}
+
+table tr td {
+    width:50px;
+    height:50px;
+}
+
+.color1{
+    background-color: rgb(109, 26, 11);
+}
+
+.color0{
+    background-color: rgb(167, 228, 247);
+}
