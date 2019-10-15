@@ -1,0 +1,16 @@
+@model CRUDelicious.Models.Dish;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>@Model.Name</h1>
+<h2>By: @Model.Chef</h2>
+<p>Description: @Model.Description</p>
+<p>Calories: @Model.Calories</p>
+<p>Tastiness: @Model.Tastiness</p>
+
+<p><a href="/">Home</a> | <a href="/delete/@Model.DishId">Delete</a> | <a href="/edit/@Model.DishId">Edit</a></p>
+
+
+

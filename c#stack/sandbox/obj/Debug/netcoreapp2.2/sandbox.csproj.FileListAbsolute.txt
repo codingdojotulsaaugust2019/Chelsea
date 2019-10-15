@@ -1,0 +1,11 @@
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/bin/Debug/netcoreapp2.2/sandbox.deps.json
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/bin/Debug/netcoreapp2.2/sandbox.runtimeconfig.json
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/bin/Debug/netcoreapp2.2/sandbox.runtimeconfig.dev.json
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/bin/Debug/netcoreapp2.2/sandbox.dll
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/bin/Debug/netcoreapp2.2/sandbox.pdb
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/obj/Debug/netcoreapp2.2/sandbox.csprojAssemblyReference.cache
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/obj/Debug/netcoreapp2.2/sandbox.csproj.CoreCompileInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/obj/Debug/netcoreapp2.2/sandbox.AssemblyInfoInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/obj/Debug/netcoreapp2.2/sandbox.AssemblyInfo.cs
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/obj/Debug/netcoreapp2.2/sandbox.dll
+/Users/chelseareynolds/GitRepo/c#stack/sandbox/obj/Debug/netcoreapp2.2/sandbox.pdb

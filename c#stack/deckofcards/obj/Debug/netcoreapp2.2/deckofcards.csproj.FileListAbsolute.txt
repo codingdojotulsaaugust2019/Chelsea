@@ -1,0 +1,11 @@
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/bin/Debug/netcoreapp2.2/deckofcards.deps.json
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/bin/Debug/netcoreapp2.2/deckofcards.runtimeconfig.json
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/bin/Debug/netcoreapp2.2/deckofcards.runtimeconfig.dev.json
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/bin/Debug/netcoreapp2.2/deckofcards.dll
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/bin/Debug/netcoreapp2.2/deckofcards.pdb
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/obj/Debug/netcoreapp2.2/deckofcards.csprojAssemblyReference.cache
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/obj/Debug/netcoreapp2.2/deckofcards.csproj.CoreCompileInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/obj/Debug/netcoreapp2.2/deckofcards.AssemblyInfoInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/obj/Debug/netcoreapp2.2/deckofcards.AssemblyInfo.cs
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/obj/Debug/netcoreapp2.2/deckofcards.dll
+/Users/chelseareynolds/GitRepo/c#stack/deckofcards/obj/Debug/netcoreapp2.2/deckofcards.pdb

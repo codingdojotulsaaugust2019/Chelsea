@@ -1,0 +1,11 @@
+/Users/chelseareynolds/GitRepo/c#stack/basic13/bin/Debug/netcoreapp2.2/basic13.deps.json
+/Users/chelseareynolds/GitRepo/c#stack/basic13/bin/Debug/netcoreapp2.2/basic13.runtimeconfig.json
+/Users/chelseareynolds/GitRepo/c#stack/basic13/bin/Debug/netcoreapp2.2/basic13.runtimeconfig.dev.json
+/Users/chelseareynolds/GitRepo/c#stack/basic13/bin/Debug/netcoreapp2.2/basic13.dll
+/Users/chelseareynolds/GitRepo/c#stack/basic13/bin/Debug/netcoreapp2.2/basic13.pdb
+/Users/chelseareynolds/GitRepo/c#stack/basic13/obj/Debug/netcoreapp2.2/basic13.csprojAssemblyReference.cache
+/Users/chelseareynolds/GitRepo/c#stack/basic13/obj/Debug/netcoreapp2.2/basic13.csproj.CoreCompileInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/basic13/obj/Debug/netcoreapp2.2/basic13.AssemblyInfoInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/basic13/obj/Debug/netcoreapp2.2/basic13.AssemblyInfo.cs
+/Users/chelseareynolds/GitRepo/c#stack/basic13/obj/Debug/netcoreapp2.2/basic13.dll
+/Users/chelseareynolds/GitRepo/c#stack/basic13/obj/Debug/netcoreapp2.2/basic13.pdb

@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <title>users</title>
 </head>
+<style>
+* {
+    font-size: 30px;
+}
+</style>
 <body>
     
 <table>
-   <tr>
-       <td>
-           
-       </td>
-   </tr>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+
+
+
+    {% for user in user_list %}
+    <tr>
+       <td>{{ user["first_name"] }}</td>
+       <td>{{ user["last_name"] }}</td>
+    </tr>
+    {% endfor %}
+
 </table>
+
 
 
 </body>

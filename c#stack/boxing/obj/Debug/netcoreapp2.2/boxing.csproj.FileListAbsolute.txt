@@ -1,0 +1,11 @@
+/Users/chelseareynolds/GitRepo/c#stack/boxing/bin/Debug/netcoreapp2.2/boxing.deps.json
+/Users/chelseareynolds/GitRepo/c#stack/boxing/bin/Debug/netcoreapp2.2/boxing.runtimeconfig.json
+/Users/chelseareynolds/GitRepo/c#stack/boxing/bin/Debug/netcoreapp2.2/boxing.runtimeconfig.dev.json
+/Users/chelseareynolds/GitRepo/c#stack/boxing/bin/Debug/netcoreapp2.2/boxing.dll
+/Users/chelseareynolds/GitRepo/c#stack/boxing/bin/Debug/netcoreapp2.2/boxing.pdb
+/Users/chelseareynolds/GitRepo/c#stack/boxing/obj/Debug/netcoreapp2.2/boxing.csprojAssemblyReference.cache
+/Users/chelseareynolds/GitRepo/c#stack/boxing/obj/Debug/netcoreapp2.2/boxing.csproj.CoreCompileInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/boxing/obj/Debug/netcoreapp2.2/boxing.AssemblyInfoInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/boxing/obj/Debug/netcoreapp2.2/boxing.AssemblyInfo.cs
+/Users/chelseareynolds/GitRepo/c#stack/boxing/obj/Debug/netcoreapp2.2/boxing.dll
+/Users/chelseareynolds/GitRepo/c#stack/boxing/obj/Debug/netcoreapp2.2/boxing.pdb

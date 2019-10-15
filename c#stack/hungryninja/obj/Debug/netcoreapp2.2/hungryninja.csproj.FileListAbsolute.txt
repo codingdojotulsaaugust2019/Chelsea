@@ -1,0 +1,11 @@
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/obj/Debug/netcoreapp2.2/hungryninja.csprojAssemblyReference.cache
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/obj/Debug/netcoreapp2.2/hungryninja.csproj.CoreCompileInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/obj/Debug/netcoreapp2.2/hungryninja.AssemblyInfoInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/obj/Debug/netcoreapp2.2/hungryninja.AssemblyInfo.cs
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/bin/Debug/netcoreapp2.2/hungryninja.deps.json
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/bin/Debug/netcoreapp2.2/hungryninja.runtimeconfig.json
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/bin/Debug/netcoreapp2.2/hungryninja.runtimeconfig.dev.json
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/bin/Debug/netcoreapp2.2/hungryninja.dll
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/bin/Debug/netcoreapp2.2/hungryninja.pdb
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/obj/Debug/netcoreapp2.2/hungryninja.dll
+/Users/chelseareynolds/GitRepo/c#stack/hungryninja/obj/Debug/netcoreapp2.2/hungryninja.pdb

@@ -20,12 +20,15 @@ def render_lists():
     return render_template("lists.html", random_numbers = [3,1,5], students = student_info)
 
 @app.route('/users')
+def render_list():
     users = [
         {'first_name': 'Michael', 'last_name': 'choi'},
         {'first_name': 'John', 'last_name': 'Suppy'},
         {'first_name': 'Mark', 'last_name': 'Gilly'},
-        {'first_name': 'KB', 'last_name': 'Tony'},
+        {'first_name': 'KB', 'last_name': 'Tony'}
     ]
+    greeting = 'hellooo'
+    return render_template("users.html", user_list=users, greeting=greeting)
 
 
 if __name__=="__main__":

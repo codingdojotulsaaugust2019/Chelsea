@@ -1,0 +1,11 @@
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/obj/Debug/netcoreapp2.2/CollectionsPractice.csprojAssemblyReference.cache
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/obj/Debug/netcoreapp2.2/CollectionsPractice.csproj.CoreCompileInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/obj/Debug/netcoreapp2.2/CollectionsPractice.AssemblyInfoInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/obj/Debug/netcoreapp2.2/CollectionsPractice.AssemblyInfo.cs
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/bin/Debug/netcoreapp2.2/CollectionsPractice.deps.json
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/bin/Debug/netcoreapp2.2/CollectionsPractice.runtimeconfig.json
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/bin/Debug/netcoreapp2.2/CollectionsPractice.runtimeconfig.dev.json
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/bin/Debug/netcoreapp2.2/CollectionsPractice.dll
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/bin/Debug/netcoreapp2.2/CollectionsPractice.pdb
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/obj/Debug/netcoreapp2.2/CollectionsPractice.dll
+/Users/chelseareynolds/GitRepo/c#stack/CollectionsPractice/obj/Debug/netcoreapp2.2/CollectionsPractice.pdb

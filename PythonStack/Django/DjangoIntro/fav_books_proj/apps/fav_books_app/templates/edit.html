@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Show</title>
+</head>
+<body>
+
+    <div class="container bg-light">
+        {% if book %}
+        <form method="POST" action="/edit_proccess/{{book.id}}">
+        {% csrf_token %}
+            <input type="text" name="title" value="{{book.title}}">
+            <p>Added by {{book.uploader.first_name}}</p>
+            <input type="text" name="desc" value="{{book.desc}}">
+            <p>Added on: {{book.created_at}}</p>
+            <p>Updated on: {{book.updated_at}}</p>
+            <p>Users who like this book:</p>
+                <ul>
+                    {% for person in favors %}
+                    <li>{{person.first_name}}</li>
+                    {% endfor %}
+                </ul>
+                <input type="submit" value="Update">
+            </form>
+            <form method="POST" action="/delete/{{book.id}}">
+                {% csrf_token %} 
+                <input type="submit" value="DELETE" name="delete">
+            </form>
+        {% endif %}
+        
+            <a href="/logged">HOME</a>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+@using chefNdish.Models;
+@model chefNdish.Models.Chef;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<a href="/">Home</a>
+
+<h2 class="display-4">Add a Chef!</h2>
+
+<form action="/add" method="post">
+
+  <div class="form-group">
+    <span asp-validation-for="FirstName"></span>
+    <label asp-for="FirstName">First Name</label>
+    <input type="text" asp-for="FirstName" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <span asp-validation-for="LastName"></span>
+    <label asp-for="LastName">Last Name</label>
+    <input type="text" asp-for="LastName" class="form-control">
+
+    <div class="form-group">
+    <span asp-validation-for="Birthday"></span>
+    <label asp-for="Birthday">Birthday</label>
+    <input type="Date" asp-for="Birthday" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add!</button>
+
+  </form>

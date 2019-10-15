@@ -1,0 +1,11 @@
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/bin/Debug/netcoreapp2.2/HelloWorld.deps.json
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/bin/Debug/netcoreapp2.2/HelloWorld.runtimeconfig.json
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/bin/Debug/netcoreapp2.2/HelloWorld.runtimeconfig.dev.json
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/bin/Debug/netcoreapp2.2/HelloWorld.dll
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/bin/Debug/netcoreapp2.2/HelloWorld.pdb
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/obj/Debug/netcoreapp2.2/HelloWorld.csprojAssemblyReference.cache
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/obj/Debug/netcoreapp2.2/HelloWorld.csproj.CoreCompileInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/obj/Debug/netcoreapp2.2/HelloWorld.AssemblyInfoInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/obj/Debug/netcoreapp2.2/HelloWorld.AssemblyInfo.cs
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/obj/Debug/netcoreapp2.2/HelloWorld.dll
+/Users/chelseareynolds/GitRepo/c#stack/HelloWorld/obj/Debug/netcoreapp2.2/HelloWorld.pdb

@@ -1,0 +1,35 @@
+﻿@using chefNdish.Models;
+@model List<Dish>
+
+
+@{
+    ViewData["Title"] = "Dishes";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<table class="table">
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Tastiness</th>
+            <th>Calories</th>
+            <th>Chef</th>
+            <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        @foreach (Dish d in @Model)
+        {
+            <tr>
+            <td>@d.Name</td>
+            <td>@d.Tastiness</td>
+            <td>@d.Calories</td>
+            <td>@d.Creator.FirstName</td>
+            <td>@d.Description</td>
+            </tr>
+        }
+    </table>
+
+<a href="/newdish">Add A Dish!</a>

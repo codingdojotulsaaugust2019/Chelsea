@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Course</title>
+</head>
+<body>
+
+        <nav>
+                <div class="nav-wrapper indigo lighten-1">
+                    <a href="/" class="brand-logo">Learnify</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>Hello, {{user_info.first_name}}!</li>
+                    <li><a href="/logged">My Dashboard</a></li>
+                    <li><a href="/create_course">Create Course</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+    <div class="container">
+        {% for course in courses %}
+        <h1>{{course.title}}</h1>
+        <p>{{course.desc}}</p>
+        {% for lesson in lessons %}
+        <div class="section">
+            <h3>Chapter {{lesson.chapter}} Lesson: {{lesson.title}}</h3>
+            <p>{{lesson.content}}</p>
+            <div class="divider"></div>
+        </div>
+        {% endfor %}
+
+    </div>
+        
+</body>
+</html>

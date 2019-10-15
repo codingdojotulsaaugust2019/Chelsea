@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+function goback(){
+    window.history.back();
+}
+</script>
+<body>
+
+    <h1>SHOW PAGE</h1>
+    <h3>Submitted Info:</h3>
+
+    <p>name: {{ name }} </p>
+    <p>email: {{ email }}</p>
+    <p>dojo location: {{ location }}</p>
+    <p>favorite language: {{ language }}</p>
+    <p>comments: {{ comments }}</p>
+
+<button onclick="goback()">Go Back</button>
+    
+</body>
+</html>

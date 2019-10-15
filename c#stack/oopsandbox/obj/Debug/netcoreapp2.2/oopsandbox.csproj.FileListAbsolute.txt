@@ -1,0 +1,11 @@
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/bin/Debug/netcoreapp2.2/oopsandbox.deps.json
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/bin/Debug/netcoreapp2.2/oopsandbox.runtimeconfig.json
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/bin/Debug/netcoreapp2.2/oopsandbox.runtimeconfig.dev.json
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/bin/Debug/netcoreapp2.2/oopsandbox.dll
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/bin/Debug/netcoreapp2.2/oopsandbox.pdb
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/obj/Debug/netcoreapp2.2/oopsandbox.csprojAssemblyReference.cache
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/obj/Debug/netcoreapp2.2/oopsandbox.csproj.CoreCompileInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/obj/Debug/netcoreapp2.2/oopsandbox.AssemblyInfoInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/obj/Debug/netcoreapp2.2/oopsandbox.AssemblyInfo.cs
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/obj/Debug/netcoreapp2.2/oopsandbox.dll
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/obj/Debug/netcoreapp2.2/oopsandbox.pdb

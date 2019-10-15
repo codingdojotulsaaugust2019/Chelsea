@@ -1,0 +1,11 @@
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/bin/Debug/netcoreapp2.2/human.deps.json
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/bin/Debug/netcoreapp2.2/human.runtimeconfig.json
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/bin/Debug/netcoreapp2.2/human.runtimeconfig.dev.json
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/bin/Debug/netcoreapp2.2/human.dll
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/bin/Debug/netcoreapp2.2/human.pdb
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/obj/Debug/netcoreapp2.2/human.csprojAssemblyReference.cache
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/obj/Debug/netcoreapp2.2/human.csproj.CoreCompileInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/obj/Debug/netcoreapp2.2/human.AssemblyInfoInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/obj/Debug/netcoreapp2.2/human.AssemblyInfo.cs
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/obj/Debug/netcoreapp2.2/human.dll
+/Users/chelseareynolds/GitRepo/c#stack/oopsandbox/human/obj/Debug/netcoreapp2.2/human.pdb

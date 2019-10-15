@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Debug Show page</title>
+  </head>
+  <body>
+    <h1>On Show page</h1>
+    <h3>The servers says: {{ name }}</h3>
+    <p style="color: red;">(Must have a response from the server!)</p>
+    <h3>This should display the count value in session: {{ request.session.count }}</h3>
+    <p style="color: red;">This link should redirect to the index page</p>
+    <a href="/">Go to Index page</a>
+    <hr>
+    <p style="color: red;">This link should redirect to the index page after the session count in updated</p>
+    <a href="/start_over">Reset</a>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Add an Author</title>
+</head>
+<style>
+    div{
+        display: inline-block;
+    }
+</style>
+<body>
+    <div class="container bg-info">
+
+        <h1 class="display-4">Add an Author</h1>
+
+        <table class="table col-4">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Author ID</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for author in author_list %}
+                <tr>
+                    <td>{{ author.id }}</td>
+                    <td>{{ author.first_name }} {{ author.last_name }}</td>
+                    <td><a href="/authors/{{author.id}}">View</a></td>
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+        
+        <form action="/add_author" method="POST">
+            {% csrf_token %}
+            <div class="form-group row col-4">
+                <label for="first_name" class="col-sm-4 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" name="f_name">
+                </div>
+            </div>
+            <div class="form-group row col-4">
+                    <label for="last_name" class="col-sm-4 col-form-label">Last Name</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="l_name">
+                    </div>
+                </div>
+            <div class="form-group row col-4">
+                    <label for="notes" class="col-sm-4 col-form-label">Notes</label>
+                    <div class="col-sm-10">
+                        <input type="textarea" class="form-control" name="notes">
+                    </div>
+                </div>
+            <div class="form-group row">
+                <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-warning">Submit</button>
+                </div>
+            </div>
+        </form>
+              
+              
+
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@model CRUDelicious.Models.Dish;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<a href="/">Home</a>
+
+<h2 class="display-4">Update Dish!</h2>
+
+<form action="/update/@Model.DishId" method="post">
+
+  <div class="form-group">
+    <span asp-validation-for="Name"></span>
+    <label asp-for="Name">Name</label>
+    <input type="text" asp-for="Name" value="@Model.Name" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <span asp-validation-for="Chef"></span>
+    <label asp-for="Chef">Chef</label>
+    <input type="text" asp-for="Chef" value="@Model.Chef" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <span asp-validation-for="Tastiness"></span>
+    <label asp-for="Tastiness">Tastiness</label>
+    <input type="number" asp-for="Tastiness" value="@Model.Tastiness" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <span asp-validation-for="Calories"></span>
+    <label asp-for="Calories">Calories</label>
+    <input type="number" asp-for="Calories" value="@Model.Calories" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <span asp-validation-for="Description"></span>
+    <label asp-for="Description">Description</label>
+    <input type="text" asp-for="Description" value="@Model.Description" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Update Dish!</button>
+
+</form>

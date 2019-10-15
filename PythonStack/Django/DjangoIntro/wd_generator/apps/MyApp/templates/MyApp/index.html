@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Word Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    .container{
+        padding: 20px;
+    }
+</style>
+<body>
+
+    <div class="container bg-dark text-white col-sm-4">
+        <div class="row col-sm-12">
+            <p class="text-center"> Random Word ( attempt # {{ request.session.counter }})</p>
+        </div>
+        <div class="row">
+                <h1 class="text-center">{{ request.session.word }}</h1>
+        </div>
+     
+    <div class="row">
+        <form action="/count" method="POST">
+            {% csrf_token %}
+            <div class="form-group row">
+                <div class="col-sm-1 offset-sm-5 ">
+                <button type="submit" name="word" class="btn btn-primary">Generate</button>
+                </div>
+            </div>
+        </form>
+            <form action="/reset" method="POST">
+                {% csrf_token %}
+                <div class="form-group row">
+                        <div class="col-sm-1 offset-sm-5 ">
+                        <button type="submit" name="reset" class="btn btn-primary">Reset Counter</button>
+                        </div>
+                </div>
+        </form>
+    </div>
+
+
+    </div>
+
+
+
+</body>
+</html>

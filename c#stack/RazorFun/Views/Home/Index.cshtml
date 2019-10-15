@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+var FoodList = new List<string>
+    {
+        "Apple Pei",
+        "Barritos",
+        "Clums Cisino",
+        "Duhnuts"
+     };
+}
+
+<div class="text-center">
+    <h1 class="display-4">Here are some delicious foods!</h1>
+</div>
+@{
+    foreach(var food in FoodList)
+    {
+        <p>@food</p>
+    }
+
+}
+
+

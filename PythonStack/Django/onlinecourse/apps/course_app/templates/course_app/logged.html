@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+        <nav>
+            <div class="nav-wrapper indigo lighten-1">
+                <a href="/" class="brand-logo">Learnify</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>Hello, {{user_info.first_name}}!</li>
+                <li><a href="/logged">My Dashboard</a></li>
+                <li><a href="/create_course">Create Course</a></li>
+                <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container section">
+                <h3>All Courses</h3>
+                {% for course in all_courses %}
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card indigo lighten-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">{{course.title}}</span>
+                            <p>{{course.desc}}</p>
+                            <p>{{course.duration}} hours</p>
+                            <p>Created by: {{course.creator.first_name}} {{course.creator.last_name}}</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="black-text" href="/show/{{course.id}}">Begin Course</a>
+                            {% if  %}
+                            <a class="black-text" href="/{{course.id}}/edit_course">Edit Course</a>
+                            <a class="black-text" href="/{{course.id}}/delete_course">Delete Course</a>
+                        </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+        </div>
+
+
+</body>
+</html>

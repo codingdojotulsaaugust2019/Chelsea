@@ -1,0 +1,11 @@
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/bin/Debug/netcoreapp2.2/FirstCSharp.deps.json
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/bin/Debug/netcoreapp2.2/FirstCSharp.runtimeconfig.json
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/bin/Debug/netcoreapp2.2/FirstCSharp.runtimeconfig.dev.json
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/bin/Debug/netcoreapp2.2/FirstCSharp.dll
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/bin/Debug/netcoreapp2.2/FirstCSharp.pdb
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.csprojAssemblyReference.cache
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.csproj.CoreCompileInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.AssemblyInfoInputs.cache
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.AssemblyInfo.cs
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.dll
+/Users/chelseareynolds/GitRepo/c#stack/FirstCSharp/obj/Debug/netcoreapp2.2/FirstCSharp.pdb
