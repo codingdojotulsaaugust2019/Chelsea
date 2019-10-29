@@ -1,0 +1,32 @@
+@model ProductView;
+
+<div class="row">
+    <div class="col-6">
+        <h3>Product: @Model.ShowProduct.Name</h3>
+        <h5>Price: $@Model.ShowProduct.Price</h5>
+        <h5>Categories:</h5>
+        <ul>
+            @foreach(var ac in Model.ShowProduct.ProdCategories){
+                <li> @ac.Category.Name </li>
+            }
+        </ul>
+    </div>
+    <div class="col-6">
+        <h3>Add Categories:</h3>
+        @{if(Model.UnaddedCategories.Count > 0)
+            {
+                <form action="/add_cat_to_prod/@Model.ShowProduct.ProdId" method="post">
+                    <div class="form-group">
+                        <label asp-for="Association.CatId">Category</label>
+                        <select class="form-control" asp-for="Association.CatId">
+                            @foreach(var c in Model.UnaddedCategories){
+                                <option value="@c.CatId">@c.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <input class="btn btn-primary form-control" value="Create" type="submit">
+                </form>
+            }
+        }
+    </div>
+</div>

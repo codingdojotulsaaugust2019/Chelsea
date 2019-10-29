@@ -1,0 +1,54 @@
+@model User
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1 class="display-4">Welcome, @Model.FirstName!</h1>
+
+
+<p class="blockquote">@Model.Description</p>
+
+
+<table class="table table-bordered col-lg-3">
+  <thead>
+    <tr>
+      <th>Friends</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(User friend in ViewBag.friends)
+    {
+    <tr>
+        <td>@friend.FirstName @friend.LastName</td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+
+<table class="table table-bordered col-lg-3">
+  <thead>
+    <tr>
+      <th>Friend Requests</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(User u in ViewBag.MyInvitationz)
+    {
+    <tr>
+        <td>@u.FirstName</td>
+        <td><a href="/accept/@u.UserId">Accept</a></td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+
+
+
+
+
+<button class="btn btn-success"><a style="color:white;" href="logout">LOG OUT</a></button>
+

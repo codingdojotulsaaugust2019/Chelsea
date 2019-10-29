@@ -1,0 +1,30 @@
+﻿@model List<User>
+
+@{
+    ViewData["Title"] = "All Users";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(User u in @Model)
+      {
+        <tr>
+        <td><a href="show/@u.UserId">@u.FirstName @u.LastName</a></td>
+        <td>
+          <form action="friendrequest" method="post">
+            <input type="hidden" name="SenderId" value="0">
+            <input type="hidden" name="TargetId" value="@u.UserId">
+            <input type="submit" value="Request Friend">
+          </form>
+        </td>
+        </tr>
+      }
+  </tbody>
+</table>

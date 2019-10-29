@@ -1,0 +1,48 @@
+@model List<Message>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = Layout = "~/Views/Shared/_LoggedLayout.cshtml";
+}
+
+<div class="container">
+
+        <p>Conversation with @ViewBag.Target.FirstName</p>
+        <img style="width:120px;height:100px" class="thumbnail m-1" src="@ViewBag.Target.ImageURL">
+
+    <div>
+        <div class="container border border-dark">
+            @foreach(Message msg in ViewBag.Messages)
+            {
+                @if(@msg.TargetId == @ViewBag.Sender.UserId)
+                {
+                <div class="row">
+                        <!-- <img style="width:120px;height:100px" class="thumbnail m-1" src="@msg.Sender.ImageURL"> -->
+                        <p class="font-weight-bolder">@msg.Sender.FirstName</p>
+                        <p class="font-italic">: @msg.Content</p>
+                        @if(@msg.Sender.UserId == @ViewBag.Sender.UserId)
+                        {
+                            <a href="#">DELETE</a>
+                        }
+                    </div>
+                    <div class="row">
+                    </div>
+                }
+                else
+                {
+                    <div class="row">
+                    <!-- <img style="width:120px;height:100px" class="thumbnail m-1" src="@msg.Sender.ImageURL"> -->
+                        <p class="font-weight-bolder">Me</p>
+                        <p class="font-italic d-inline-block">: @msg.Content</p>
+                    </div>
+                    <div class="row">
+                    </div>
+                }
+            }
+        </div>
+        <partial class="col-lg-4" name="MessagePartial"/>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,22 @@
+@model Wedding
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>@Model.Wedder1 & @Model.Wedder2's Wedding</h1>
+<h2>Date: @Model.Date</h2>
+<p>Guest List:</p>
+
+<ul>
+    @foreach (Guest g in @Model.Guests)
+    {
+        <li>@g.User.FirstName</li>
+    }
+</ul>
+
+
+
+
+<button class="btn btn-success"><a style="color:white;" href="/logout">LOG OUT</a></button>
+<button class="btn btn-success"><a style="color:white;" href="/dashboard">DASHBOARD</a></button>

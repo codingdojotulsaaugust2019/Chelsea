@@ -1,0 +1,89 @@
+
+
+1. dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0
+
+2. Add Context file to Models.
+
+3. Paste into Context file:
+
+using Microsoft.EntityFrameworkCore;
+ 
+namespace CRUDelicious.Models
+{
+    public class MyContext : DbContext
+    {
+        // base() calls the parent class' constructor passing the "options" parameter along
+        public deliciousContext(DbContextOptions options) : base(options) { }
+    }
+}
+
+4. Add to Startup.cs using statements:
+
+using CRUDelicious.Models;
+using Microsoft.EntityFrameworkCore;
+
+5. Create the model and set a [Key], make fields get/set properties - format:
+
+using System.ComponentModel.DataAnnotations;
+using System;
+    namespace MyProject.Models
+    {
+        public class User
+        {
+            [Key]
+            public int UserId { get; set; }
+            public string FirstName { get; set; }
+            public DateTime CreatedAt {get;set;}
+        }
+    }
+
+6. Add into Context the mapper between model (Dish) and name of table (Dishes):
+
+public DbSet<Dish> Dishes {get;set;}
+
+7. Open controller and add using:
+
+using Microsoft.EntityFrameworkCore;
+
+8. Then, in controller, inject context:
+
+private MyContext dbContext;
+     
+        public HomeController(MyContext context)
+        {
+            dbContext = context;
+        }
+
+9. Add following line to the ConfigureServices function in Startup:
+
+services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+
+10. Then add following in a--settings.JSON:
+
+ "DBInfo":
+    {
+        "Name": "MySQLconnect",
+        "ConnectionString": "server=localhost;userid=root;password=root;port=3306;database=mydb;SslMode=None"
+    }
+
+
+11. Run:
+dotnet ef migrations add FirstMigration
+
+12. Then run:
+dotnet ef database update
+
+
+
+
+
+
+
+https://image.freepik.com/free-photo/smiling-zombie_1194-49.jpg?1
+
+
+
+
+
+
+

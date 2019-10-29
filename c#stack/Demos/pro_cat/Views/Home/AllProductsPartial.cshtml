@@ -1,0 +1,19 @@
+@model List<Product>
+
+
+<h3>Products</h3>
+<table class="table">
+    <thead>
+        <th>Name</th>
+        <th>Price:</th>
+    </thead>
+    <tbody>
+@{ foreach( var p in ViewBag.AllProducts ){
+    <tr>
+    <td><a href="product/@p.ProdId">@p.Name</a></td>
+    <td>$@p.Price</td>
+    </tr>
+}
+}
+</tbody>
+</table>

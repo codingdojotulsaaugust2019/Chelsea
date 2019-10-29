@@ -16,5 +16,4 @@ namespace lognReg
     [MinLength(2, ErrorMessage="Please enter a password.")]
     public string lPassword { get; set; }
     }
-
 }

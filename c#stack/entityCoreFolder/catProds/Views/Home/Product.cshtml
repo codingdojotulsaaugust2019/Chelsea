@@ -1,0 +1,42 @@
+@model Product
+
+@{
+    ViewData["Title"] = "A Product";
+}
+
+<div class="text-center">
+    <h1 class="display-4 font-weight-bold">@Model.Name</h1>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-6">
+            <p class="font-weight-bold">@Model.Name's Current Categories</p>
+            @foreach(var c in ViewBag.cats1)
+            {
+                <p>@c.Name</p>
+            }
+        </div>
+
+        <div class="col-lg-6">
+            <p class="font-weight-bold">Add a Category</p>
+            <form action="/addcat" method ="post">
+                <label></label>
+                <select name="CategoryId">
+                    @foreach(Category c in ViewBag.cats)
+                    {
+                        <option value="@c.CategoryId">@c.Name</option>
+                    }
+                </select>
+                <input type="hidden" value="@Model.ProductId" name="ProductId">
+                <button type="submit" class="btn btn-primary">Add to Category!</button>
+            </form>
+        </div>
+
+        
+    </div>
+
+
+</div>

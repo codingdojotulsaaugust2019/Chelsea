@@ -1,0 +1,103 @@
+@model User
+<div class="container border border-dark d-inline-block col-lg-12 col-md-12 p-2">
+  <p class="font-weight-bold">REGISTER</p>
+  <form asp-action="Register" asp-controller="Home" method="post">
+    <ul class="list-unstyled">
+      <li><span style="color:red;" asp-validation-for="FirstName"></span></li>
+      <li><span style="color:red;" asp-validation-for="LastName"></span></li>
+      <li><span style="color:red;" asp-validation-for="Email"></span></li>
+      <li><span style="color:red;" asp-validation-for="Gender"></span></li>
+      <li><span style="color:red;" asp-validation-for="Birthday"></span></li>
+      <li><span style="color:red;" asp-validation-for="Description"></span></li>
+      <li><span style="color:red;" asp-validation-for="Tagline"></span></li>
+      <li><span style="color:red;" asp-validation-for="Hobbies"></span></li>
+      <li><span style="color:red;" asp-validation-for="InterestedIn"></span></li>
+      <li><span style="color:red;" asp-validation-for="City"></span></li>
+      <li><span style="color:red;" asp-validation-for="State"></span></li>
+      <li><span style="color:red;" asp-validation-for="Password"></span></li>
+      <li><span style="color:red;" asp-validation-for="Confirm"></span></li>
+    </ul>
+
+    <div class="form-group">
+      <label asp-for="FirstName">First Name</label>
+      <input asp-for="FirstName" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="LastName">Last Name</label>
+      <input asp-for="LastName" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="ImageURL">Image URL</label>
+      <input asp-for="ImageURL" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="Email">Email</label>
+      <input asp-for="Email" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="Gender">Gender</label>
+      <select asp-for="Gender">
+          <option value="Male" class="form-control">Male</option>
+          <option value="Female" class="form-control">Female</option>
+          <option value="Non-Binary" class="form-control">Non-Binary</option>
+      </select>
+
+    <div class="form-group">
+      <label asp-for="Birthday">Birthday</label>
+      <input asp-for="Birthday" type="Date" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="Description">About Me</label>
+      <input asp-for="Description" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="Tagline">Tagline</label>
+      <input asp-for="Tagline" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="Hobbies">Hobbies</label>
+      <input asp-for="Hobbies" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="InterestedIn">Interested In</label>
+      <select asp-for="InterestedIn">
+          <option value="Male" class="form-control">Male</option>
+          <option value="Female" class="form-control">Female</option>
+          <option value="Non-Binary" class="form-control">Non-Binary</option>
+          <option value="Everyone" class="form-control">Everyone</option>
+      </select>
+
+    <div class="form-group">
+      <label asp-for="City">City</label>
+      <input asp-for="City" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="State">State</label>
+      <input asp-for="State" type="text" class="form-control">
+    </div>
+
+
+    <div class="form-group">
+      <label asp-for="Password">Password</label>
+      <input asp-for="Password" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="Confirm">Confirm Password</label>
+      <input asp-for="Confirm" type="text" class="form-control">
+    </div>
+
+    <input type="submit" class="btn btn-primary">
+
+  </form>
+
+</div>

@@ -1,0 +1,28 @@
+@model Category;
+
+<div class="row">
+    <div class="col-6">
+        <h3>Category: @Model.Name</h3>
+        <h5>Products(Count): @ViewBag.Associated_Products.Count</h5>
+        <h5>Products:</h5>
+        <ul>
+            @foreach(var p in ViewBag.Associated_Products){
+                <li> @p.Name </li>
+            }
+        </ul>
+    </div>
+    <div class="col-6">
+        <h3>Add Products:</h3>
+        <form action="/add_prod_to_cat" method="post">
+            <input type=hidden name="catid" value="@Model.CatId">
+            <div class="form-group">
+                <label for="Product">Product</label>
+                <Select class="form-control" for="Product" name="prodid">
+                @foreach(var p in ViewBag.Products){
+                    <option value="@p.ProdId">@p.Name</option>
+                }
+            </div>
+            <input class="btn btn-primary form-control" value="Create" type="submit">
+        </form>
+    </div>
+</div>

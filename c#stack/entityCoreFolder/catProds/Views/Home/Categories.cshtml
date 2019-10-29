@@ -1,0 +1,48 @@
+﻿@using catProds.Models;
+@model List<Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Categories</h1>
+</div>
+
+<div class="container">
+
+<div class="row">
+
+
+    <div class="col-lg-6">
+        <form action="/newcategory" method="post">
+            <h2 class="display-4">New Category</h2>
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" name="Name">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create Category!</button>
+
+        </form>
+    </div>
+
+
+    <div class="col-lg-6 text-center">
+        <h2 class="display-4">List of Categories</h2>
+       <ul class="list-unstyled">
+            @foreach (Category c in Model)
+            {
+                <a href="/category/@c.CategoryId"><li>@c.Name</li></a>
+            }
+           
+       </ul>
+    </div>
+
+
+</div>
+
+
+
+
+</div>

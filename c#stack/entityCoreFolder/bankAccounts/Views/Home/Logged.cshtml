@@ -1,0 +1,65 @@
+@model User
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, @Model.FirstName @Model.LastName</h1>
+    <p>Current Balance: @Model.Balance</p>
+</div>
+
+<div class="container">
+
+<div class="container">
+    <form action="transaction" method="post">
+
+        <div class="form-group col-lg-4">
+            <label for="Amount">Amount</label>
+            <input name="Amount" type="number" step=".01" class="form-control">
+        </div>
+
+        <div class="form-group">
+        <select name="Deposit" class="form-group col-lg-4">
+            <option class="form-control" value="false">Withdraw Amount</option>
+            <option class="form-control" value="true">Deposit Amount</option>
+        </select>
+        </div>
+
+        <input type="hidden" name="UserId" value="@Model.UserId">
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="container">
+    <table class="table table-bordered col-lg-6">
+    <thead>
+        <tr>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Transaction trans in ViewBag.Transactions)
+        {
+        <tr>
+            <td>@trans.Amount</td>
+            <td>@trans.TransactionAt</td>
+                @if(@trans.Deposit == false)
+                {
+                    <td>Withdrawl</td>
+                }
+                else
+                {
+                    <td>Deposit</td>
+                }
+        </tr>
+        }
+    </tbody>
+    </table>
+</div>
+</div>
+
+

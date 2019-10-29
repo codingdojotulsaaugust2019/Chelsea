@@ -1,0 +1,54 @@
+h1 {
+    background-color: darkgray;
+    margin: 5px;
+    padding: 5px;
+}
+
+p {    
+    background-color: gray;
+    margin: 5px;
+    padding: 5px;
+}
+
+    #yellow {
+         background-color: yellow;
+         vertical-align: top;
+         margin: 5px;
+         padding: 5px;
+    }
+
+    @media only screen and (max-width: 500px){
+        .sm{
+            display: block;
+        }
+        .med{
+            display: none;
+        }
+        .lg{
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 501px){
+        .sm{
+            display: none;
+        }
+        .med{
+            display: block;
+        }
+        .lg{
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 1024px){
+        .sm{
+            display: none;
+        }
+        .med{
+            display: none;
+        }
+        .lg{
+            display: block;
+        }
+    }

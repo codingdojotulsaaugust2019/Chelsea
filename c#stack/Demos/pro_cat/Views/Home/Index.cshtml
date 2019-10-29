@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4"><a href=/products/>Products</a> | <a href=/categories/>Categories</a></h1>
+
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <partial name="AllProductsPartial" view-data="ViewData" />
+            <a href="/addproduct/" class="btn btn-primary">Add Product</a>
+        </div>
+        <div class="col-6">
+            <partial name="AllCategoriesPartial" view-data="ViewData" />
+            <a href="/addcategory/" class="btn btn-primary">Add Category</a>
+        </div>
+    </div>
+</div>

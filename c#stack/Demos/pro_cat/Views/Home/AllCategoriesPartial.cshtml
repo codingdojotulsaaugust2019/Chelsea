@@ -1,0 +1,20 @@
+@using pro_cat.Models;
+@model List<Category>;
+
+
+<h3>Categories</h3>
+<table class="table">
+    <thead>
+        <th>Name</th>
+        <th>Products:</th>
+    </thead>
+    <tbody>
+@{ foreach( var c in ViewBag.AllCategories ){
+    <tr>
+    <td><a href="category/@c.CatId">@c.Name</a></td>
+    <td>@c.CatProducts.Count</td>
+    </tr>
+}
+}
+</tbody>
+</table>

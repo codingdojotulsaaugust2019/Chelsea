@@ -1,0 +1,57 @@
+@using catProds.Models;
+@model List<Product>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 font-weight-bold">Products</h1>
+</div>
+
+<div class="container">
+
+<div class="row">
+
+
+    <div class="col-lg-6">
+        <p class="font-weight-bold">New Product</p>
+        <form action="/newproduct" method="post">
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" name="Name">
+            </div>
+            <div class="form-group">
+                <label for="Description">Description</label>
+                <textarea class="form-control" name="Description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="Price">Price</label>
+                <input type="number" step="0.01" min="0.01" class="form-control" name="Price">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Create Product!">
+        </form>
+    </div>
+
+
+
+    <div class="col-lg-6 text-center">
+        <p class="font-weight-bold">List of Products</p>
+       <ul class="list-unstyled">
+            @foreach (Product p in Model)
+            {
+                <a href="/product/@p.ProductId"><li>@p.Name</li></a>
+            }
+           
+       </ul>
+
+    </div>
+
+
+</div>
+
+
+
+
+</div>

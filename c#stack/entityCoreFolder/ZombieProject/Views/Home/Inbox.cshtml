@@ -1,0 +1,18 @@
+@model List<User>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = Layout = "~/Views/Shared/_LoggedLayout.cshtml";
+}
+
+<div class="container">
+    <p>Conversations:</p>
+    @foreach(User u in @Model)
+    {
+        <ul>
+            <li><a href="messager/@u.UserId">@u.FirstName @u.LastName</a></li>
+        </ul>
+        
+    }
+
+</div>

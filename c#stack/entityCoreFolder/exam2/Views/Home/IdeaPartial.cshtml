@@ -1,0 +1,19 @@
+@model Idea
+
+<div class="container d-inline-block col-lg-5 align-top p-2">
+    <form asp-action="CreateIdea" asp-controller="Home" method="post">
+        <ul class="list-unstyled">
+            <li><span style="color:red;" asp-validation-for="Content"></span></li>
+        </ul>
+
+    <div class="form-group">
+      <label asp-for="Content">Add An Idea:</label>
+      <input asp-for="Content" type="text" class="form-control">
+    </div>
+
+    <input type="hidden" asp-for="UserId" value="0">
+
+    <input type="submit" value="Add Idea!" class="btn btn-primary">
+
+    </form>
+  </div>

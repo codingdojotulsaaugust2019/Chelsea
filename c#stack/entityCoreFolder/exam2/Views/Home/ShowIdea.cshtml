@@ -1,0 +1,19 @@
+@model Idea
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+
+<p>@Model.Creator.Name says: @Model.Content</p>
+
+<p>Users who liked this idea:</p>
+<ul>
+    @foreach (Like l in @Model.Likes)
+    {
+        <li><a href="/person/@l.Liker.UserId">@l.Liker.Name</a> (Alias: @l.Liker.Alias)</li>
+    }
+</ul>
+
+
+</div>

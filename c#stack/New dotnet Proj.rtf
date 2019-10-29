@@ -1,0 +1,72 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10100\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 New web project:\
+\
+1. \'93dotnet new web --no-https -o ProjectName\'94\
+\
+3. In Startup.cs:\
+    public void ConfigureServices(IServiceCollection services)\
+    \{\
+        services.AddMvc();  //add this line\
+    \}\
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)\
+    \{\
+        // some code removed for brevity\
+        app. UseStaticFiles(); //Also add this line\
+        app.UseMvc();   //add this line, replacing the app.run lines of code\
+    \}\
+\
+4. Create a \'93Controller\'94 folder. Inside, has a controller for each model the app will handle. Documents should be named \'93UsersController.cs\'94, \'93ProductsController.cs\'94 etc.\
+\
+5. Basic structure of a controller is below:\
+\
+    using Microsoft.AspNetCore.Mvc;\
+    namespace YourNamespace.Controllers     //be sure to use your own project's namespace!\
+    \{\
+        public class HelloController : Controller   //remember inheritance??\
+        \{\
+            //for each route this controller is to handle:\
+            [HttpGet]       //type of request\
+            [Route("")]     //associated route string (exclude the leading /)\
+            public string Index()\
+            \{\
+                return "Hello World from HelloController!";\
+            \}\
+        \}\
+    \}\
+\
+6. Create a \'93Views\'94 folder to hold all the views that have subdirectories that match my controller class names. \'93UserController will look for its view in Views/Users, and then Shared if it cannot find it there. Inside of Views are the cshtml files.\
+\
+7. Add a directory called wwwroot where images, css, and javascript go.\
+\
+****************************************************************************************************\
+\
+New MVC project:\
+\
+Dotnet new mvc --no-https -o ProjName\
+\
+1. In Startup File:\
+	Delete CookiePolicyOptions code block from inside services.Configure.\
+	Delete app.UseCookiePolicy();\
+	Delete app.UseHttpsRedirection();\
+2. In _Layouts.cs file:\
+	Delete the tags called partial with the name CookieConsentPartial.\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

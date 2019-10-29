@@ -1,0 +1,60 @@
+@model List<Wedding>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1 class="display-4">Welcome to the Wedding Planner</h1>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Weddees</th>
+      <th>Big Date</th>
+      <th>Guest #</th>
+      <th>Action</th>
+      <th>Planner</th>
+    </tr>
+  </thead>
+  <tbody>
+        @foreach (Wedding w in @Model)
+        {
+        <tr>
+            <td><a href="wedding/@w.WeddingId">@w.Wedder1 & @w.Wedder2</a></td>
+            <td>@w.Date</td>
+            <td>@w.Guests.Count</td>
+            <td>
+                    @{
+                        if(@w.Planner.UserId == @ViewBag.session)
+                        {
+                            <a href="delete/@w.WeddingId">DELETE</a>
+                        }
+                        else if(@w.Guests.Any(u => u.UserId == @ViewBag.session))
+                        {
+                            <form action="unrsvp" method="post">
+                                <input type="hidden" value="@w.WeddingId" name="WeddingId">
+                                <input type="hidden" value="@ViewBag.session" name="UserId">
+                                <button type="submit">UN-RSVP</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <form action="rsvp" method="post">
+                                <input type="hidden" value="@w.WeddingId" name="WeddingId">
+                                <input type="hidden" value="@ViewBag.session" name="UserId">
+                                <button type="submit">RSVP</button>
+                            </form>
+                        }
+                    }
+            </td>
+            <td>@w.Planner.FirstName</td>
+        </tr>
+        }
+  </tbody>
+</table>
+
+
+<button class="btn btn-success"><a style="color:white;" href="new">New Wedding</a></button>
+
+<button class="btn btn-success"><a style="color:white;" href="logout">LOG OUT</a></button>

@@ -1,0 +1,41 @@
+@model Wedding
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container border border-dark d-inline-block col-lg-5 p-2">
+
+  <p class="font-weight-bold">Plan a Wedding</p>
+
+  <form asp-action="Create" asp-controller="Home" method="post">
+
+    <div class="form-group">
+      <label asp-for="Wedder1">Wedder One Name</label>
+      <input asp-for="Wedder1" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="Wedder2">Wedder Two Name</label>
+      <input asp-for="Wedder2" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="Date">Date</label>
+      <input asp-for="Date" type="Date" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="Address">Address</label>
+      <input asp-for="Address" type="text" class="form-control">
+    </div>
+
+    <input type="hidden" value="0" name="UserId">
+
+    <input type="submit" class="btn btn-primary">
+
+  </form>
+
+</div>
+  <button class="btn btn-success"><a style="color:white;" href="logout">LOG OUT</a></button>
+  <button class="btn btn-success"><a style="color:white;" href="dashboard">DASHBOARD</a></button>

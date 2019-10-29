@@ -1,0 +1,25 @@
+@model User
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+
+    <div class="row">
+        <img style="width:380px;height:330px" class="img-thumbnail col-lg-4" src="@Model.ImageURL" alt="Thumbnail image">
+        <div class="col-lg-6">
+            <h1 class="display-4">@Model.FirstName @Model.LastName</h1>
+            <p>Interested In: @Model.InterestedIn</p>
+            <p>Location: @Model.City, @Model.State</p>
+            <p>My Bio: @Model.Description</p>
+            <p>My Hobbies: @Model.Hobbies</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <p>@Model.Tagline</p>
+    </div>
+
+
+</div>

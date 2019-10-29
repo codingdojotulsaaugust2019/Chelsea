@@ -1,0 +1,28 @@
+@model List<User>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = Layout = "~/Views/Shared/_LoggedLayout.cshtml";
+}
+
+<div class="container">
+
+    <p>Available Zombies:</p>
+    @foreach (User u in @Model)
+    {
+
+    <div class="card d-inline-block m-1 col-lg-4 bg-danger text-white">
+        <img style="width:280px;height:230px" class="card-img-top m-1" src="@u.ImageURL">
+        <div class="card-body">
+            <h4 class="card-title">@u.FirstName @u.LastName</h4>
+            <p class="card-text">
+            @u.Tagline
+            </p>
+            <a href="profile/@u.UserId" class="btn btn-primary">View Profile</a>
+            <a href="messager/@u.UserId" class="btn btn-primary">Message</a>
+        </div>
+    </div>
+
+    }
+
+</div>

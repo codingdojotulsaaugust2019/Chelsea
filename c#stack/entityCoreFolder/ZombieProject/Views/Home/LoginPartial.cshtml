@@ -1,0 +1,25 @@
+@model LoginUser
+<div class="container border rounded border-dark d-inline-block col-lg-12 align-top p-2 my-2 ml-0">
+  <p class="font-weight-bold">LOGIN</p>
+  <form asp-action="Login" asp-controller="Home" method="post">
+
+    <ul class="list-unstyled">
+      <li><span style="color:red;" asp-validation-for="lEmail"></span></li>
+      <li><span style="color:red;" asp-validation-for="lPassword"></span></li>
+    </ul>
+    
+    <div class="form-group">
+      <label asp-for="lEmail">Email</label>
+      <input asp-for="lEmail" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label asp-for="lPassword">Password</label>
+      <input asp-for="lPassword" type="text" class="form-control">
+    </div>
+
+    <input type="submit" class="btn btn-primary">
+
+  </form>
+
+</div>

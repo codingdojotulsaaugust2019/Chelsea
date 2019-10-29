@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1 class="display-4">Wuz Up, @ViewBag.User.Alias!</h1>
+
+<partial name="IdeaPartial"/>
+
+<div class="container col-lg-8">
+    <h2 class="display-4">Ideas</h2>
+    <p style="color:red;">@ViewBag.error</p>
+        @foreach(Idea idea in ViewBag.ideas)
+        {
+        <div class="container border border-dark">
+            <p><a href="person/@idea.UserId">@idea.Creator.Name</a> says: @idea.Content</p>
+            @if(@idea.UserId == @ViewBag.User.UserId)
+            {
+                
+                <a href="delete/@idea.IdeaId">DELETE IDEA</a>
+            }
+            else
+            {
+                <form action="createlike" method="post">
+                    <input type="hidden" name="UserId" value="@ViewBag.User.UserId">
+                    <input type="hidden" name="IdeaId" value="@idea.IdeaId">
+                    <input type="submit" value="LIKE">
+                </form>
+            }
+            <p> @idea.Likes.Count people like <a href="idea/@idea.IdeaId">this</a>.</p>
+        </div>
+        }
+
+</div>
+
+

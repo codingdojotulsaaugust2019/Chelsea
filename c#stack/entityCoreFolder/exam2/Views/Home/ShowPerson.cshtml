@@ -1,0 +1,16 @@
+@model User
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+
+<p>Name: @Model.Name</p>
+<p>Alias: @Model.Alias</p>
+<p>Email: @Model.Email</p>
+
+<p>I've liked @Model.Likes.Count Ideas.</p>
+<p>I've posted @Model.Ideas.Count Ideas.</p>
+
+</div>
