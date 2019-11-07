@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Sockets</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+    
+            var socket = io(); //1
+    
+            socket.on('greeting', function (data) { //4
+                console.log(data.msg); //5
+                socket.emit('thankyou', { msg: 'Thank you for connecting me! -Client' }); //6
+            });
+
+        $("#submit").click(function(){
+
+            console.log(`The data sent throught the form is NAME: ${$('#name').val()} , LOCATION: ${$('#location').val()} , LNGUAGE: ${$('#language').val()}, and COMMENT: ${$('#comment').val()}.`);
+
+            socket.emit('grabbed',{msg: `The data sent throught the form is NAME: ${$('#name').val()} , LOCATION: ${$('#location').val()} , LNGUAGE: ${$('#language').val()}, and COMMENT: ${$('#comment').val()}.`});
+        })
+
+        socket.on('display', function(data){
+            alert("The server recieved and is now sending back to the html te following data: " + data);
+        })
+
+         })
+    </script>
+</head>
+<body>
+    <h1>Fun with sockets</h1>  
+
+<div class="container">
+
+    <h1 class="display-4">Here's a nice form...</h1>
+        <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <select>
+                        <option class="form-control" id="location" value="Tulsa">Tulsa</option>
+                        <option class="form-control" id="location" value="Chicago">Chicago</option>
+                        <option class="form-control" id="location" value="New York">New York</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Favorite Language</label>
+                    <select id="language">
+                        <option class="form-control" value="JavaScript">JavaScript</option>
+                        <option class="form-control" value="C#">C#</option>
+                        <option class="form-control" value="Python">Python</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Comments</label>
+                    <textarea id="comment" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+</div>
+
+
+    <a href="#" id="submit">SUBMIT</a>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<script>
+
+    var arr = [-3,4,7,3,21,0];
+
+    function min(arr){
+        var min = arr[0];
+        for(var i=0; i<arr.length; i++){
+            if(arr[i] > min){
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    function max(arr){
+        var max = arr[0];
+        for(var i=0; i<arr.length; i++){
+            if(arr[i] < max){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    function avg(arr){
+        var max = arr[0];
+        var sum = 0;
+        for(var i=0; i<arr.length; i++){
+            sum = sum + arr[i];
+        }
+        var avg = sum/arr.length;
+        
+        return avg;
+    }
+
+ function MinMaxAvg(arr){
+    var m = min(arr);
+    var ma = max(arr);
+    var a = avg(arr);
+    return "The Min is" +" "+ m+" " + "and the Max is" + " "+ma+" " + "and the Average is" + " "+ a+" " + "."
+ }
+
+ console.log(MinMaxAvg(arr));
+
+
+</script>

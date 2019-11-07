@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <button>Go Hunting</button>
+    <h1 class="0"></h1>
+    <h1 class="1"></h1>
+    <h1 class="2"></h1>
+    
+
+<script>
+
+
+    $('button').click(function() {
+    
+    $.get("https://api.github.com/users/gatewaytoknowware", function(data){
+
+        console.log(data);
+        var huntername = data;
+        $('h1.0').html("Hunter Name: " + huntername.login);
+        $('h1.1').html("Hunter ID: " + huntername.id);
+        $('h1.2').html("Public Repos: " + huntername.public_repos);
+
+    })
+    });
+
+
+</script>
+</body>
+</html>

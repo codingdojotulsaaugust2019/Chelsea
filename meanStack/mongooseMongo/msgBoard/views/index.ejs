@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="display-4">The Dojo Message Board</h1>
+
+        <h2 class="display-4 font-weight-light">Make a Post</h2>
+        <form action="post" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input class="form-control" type="text" name="poster">
+            </div>
+            <div class="form-group">
+                <label for="post">Post:</label>
+                <input class="form-control" type="text" name="content">
+            </div>
+            <input type="submit" value="Submit Post">
+        </form>
+
+        <% for (var post of allposts) { %>
+
+            <h1 class="display-4"><%= post.poster %> posted:</h1>
+            <h1 class="display-4">POST: <%= post.content %></h1>
+
+            
+                <% for (var c of post.comments) { %>
+                    <div class="container border border-dark">
+                        <p><%= c.poster %> commented:</p>
+                        <p><%= c.content %></p>
+                    </div>
+                <%}%>
+            
+        <form action="comment" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input class="form-control" type="text" name="poster">
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <input class="form-control" type="text" name="content">
+            </div>
+            <input type="hidden" name="post" value="<%= post._id %>">
+                <input type="submit" value="Submit Comment">
+        </form>
+        <%}%>
+        
+
+
+
+    </div>
+</body>
+</html>

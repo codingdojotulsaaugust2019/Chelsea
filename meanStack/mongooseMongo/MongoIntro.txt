@@ -1,0 +1,24 @@
+use my_first_db
+db.createCollections(“students”)
+db.students.insert({name: “Chelsea”,  home_state: “Oklahoma”,  lucky_number: 7,  birthday: {month: 12, day: 16, year: 1994}})
+db.students.find().pretty()
+db.students.find({$or:[{home_state: "Colorado"},{home_state:"Kerala"}]}).pretty()
+db.students.find({lucky_number: {$gt:3}}).pretty()
+db.students.find({lucky_number: {$lte:10}}).pretty()
+db.students.find({$and:[{lucky_number: {$gte: 1}},{lucky_number: {$lte: 9}}]}).pretty()
+db.students.update({}, {$set: {interests: ["coding", "brunch", "MongoDB"]}})
+
+the above line only added array to the FIRST document in my collection, not all.
+
+I'm stopping here and moving onto mongoose.
+
+
+	8.	Add a field to each student collection called 'interests' that is an ARRAY.  It should contain the following entries: 'coding', 'brunch', 'MongoDB'. Do this in ONE operation.
+	9.	Add some unique interests for each particular student into each of their interest arrays.
+	10.	Add the interest 'taxes' into someone's interest array.
+	11.	Remove the 'taxes' interest you just added.
+	12.	Remove all students who are from California.
+	13.	Remove a student by name. 
+	14.	Remove a student whose lucky number is greater than 5 (JUST ONE)
+
+

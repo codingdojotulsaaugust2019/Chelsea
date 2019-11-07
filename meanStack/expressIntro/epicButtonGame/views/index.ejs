@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Epic Button Game</title>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+    
+            var socket = io(); 
+
+            console.log("this logs what socket variable is" + socket);
+            var count = 0;
+            console.log("My count variable is" + count);
+    
+            socket.on('count', function (data) { 
+                console.log("the value of data in the index file 'count' listener is..." + data);
+                count = data; 
+            });
+
+            $('#push').click(function(e){
+                   console.log(e);
+                   //e.preventDefault(); // prevents page reloading. e is the event object.
+                   socket.emit('add');
+               });
+   
+               $('#reset').click(function(e){
+                   //e.preventDefault(); // prevents page reloading
+                   socket.emit('reset');
+               });
+   
+               $('#thecount').append($('<li>').text(count));
+         })
+
+
+    </script>
+
+<body>
+
+    <h1>The button has been pushed <p id="thecount"></p> </h1>
+    <button id="push">Add Count</button>
+    <button id="reset">Reset Count</button>
+    
+</body>
+</html>

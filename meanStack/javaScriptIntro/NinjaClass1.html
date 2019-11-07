@@ -1,0 +1,46 @@
+<script>
+
+
+function Ninja(name){
+
+    this.name = name;
+
+    this.health = 100;
+
+    var speed = 3;
+
+    this.seeSpeed = function () {
+        return speed;
+    }
+
+    var strength = 3;
+    this.seeStrength = function () {
+        return strength;
+    }
+
+
+    this.sayName = function() {
+        console.log(this.name);
+    }
+
+    this.showStats = function() {
+        console.log(`Name: ${this.name}, Health: ${this.health}, Speed: ${this.seeSpeed()}, Strength: ${this.seeStrength()}`);
+    }
+
+    this.drinkSake = function() {
+        this.health += 10;
+        console.log("Now my health is " + this.health);
+    }
+
+}
+
+var ninja1 = new Ninja("Chels");
+ninja1.sayName();
+ninja1.showStats();
+ninja1.drinkSake();
+ninja1.showStats();
+
+
+
+
+</script>

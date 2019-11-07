@@ -1,0 +1,60 @@
+<script>
+
+    //WILL WORK
+
+function bracesValid(string){
+
+    var targets = ["{", "[","(", "}", "]",")"];
+    var stack = [];
+    var status = true;
+
+
+    for(var i = 0; i < string.length; i++){
+        
+        switch(string[i]){
+            case "(" :
+                stack.push(string[i]);
+                break;
+
+            case "{":
+                stack.push(string[i]);
+                break;
+
+            case "[":
+                stack.push(string[i]);
+                break;
+
+            case ")":
+                var x = stack.pop();
+                if(x != "("){
+                    status = false;
+                }
+                break;
+            case "]":
+                var x = stack.pop();
+                if(x != "["){
+                    status = false;
+                }
+                break;
+            case "}":
+                var x = stack.pop();
+                if(x != "{"){
+                    status = false;
+                }
+                break;
+            default:
+                break;
+        }
+        
+    }
+    return status;
+
+}
+
+    var string = "(())({[Hi]})";
+    var string1 = "(hello}";
+
+    console.log(bracesValid(string));
+    console.log(bracesValid(string1));
+
+</script>

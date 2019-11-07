@@ -1,0 +1,72 @@
+<script>
+
+
+function Ninja(name){
+
+    this.name = name;
+
+    this.health = 100;
+
+    var speed = 3;
+
+    this.seeSpeed = function () {
+        return speed;
+    }
+
+    var strength = 3;
+    this.seeStrength = function () {
+        return strength;
+    }
+
+
+    this.sayName = function() {
+        console.log(this.name);
+    }
+
+    this.showStats = function() {
+        console.log(`Name: ${this.name}, Health: ${this.health}, Speed: ${this.seeSpeed()}, Strength: ${this.seeStrength()}`);
+    }
+
+    this.drinkSake = function() {
+        this.health += 10;
+        console.log("Now my health is " + this.health);
+    }
+
+    this.punch = function(ninja){
+        if(ninja instanceof Ninja == true){
+            ninja.health -= 5;
+            console.log(`${this.name} just punched ${ninja.name}`)
+        }
+        else{
+            console.log("This is not a ninja.")
+        }
+    }
+
+    this.kick = function(ninja){
+        if(ninja instanceof Ninja == true){
+            ninja.health -= 15 * this.seeStrength();
+            console.log(`${this.name} just kicked ${ninja.name} for a total point loss of ${15* this.seeStrength()}`)
+        }
+        else{
+            console.log("This is not a ninja.")
+        }
+    }
+
+}
+
+var ninja1 = new Ninja("Chels");
+var ninja2 = new Ninja("Taylor");
+ninja1.sayName();
+ninja1.showStats();
+ninja1.drinkSake();
+ninja2.showStats();
+ninja2.punch(ninja1);
+console.log("Now " + ninja1.name + "'s" + " health is " + ninja1.health);
+ninja2.kick(ninja1);
+console.log("Now " + ninja1.name + "'s" + " health is " + ninja1.health);
+ninja1.kick(ninja2.health);
+
+
+
+
+</script>

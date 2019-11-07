@@ -1,0 +1,158 @@
+
+<script>
+
+
+    const eeyore = {
+        character: "Eeyore",
+        greet: function(){
+            console.log("I'm sad.");
+            }
+    }
+    
+    
+    const winnie = {
+        character: "Winnie the pooh",
+        greet: function(){
+            console.log("Did someone say honey?");
+            }
+    }
+
+    const kanga = {
+        character: "Kanga",
+        greet: function(){
+            console.log("Well hello there.");
+            }
+    }
+
+    const chris = {
+        character: "Christopher Robin",
+        greet: function(){
+            console.log("Hi its Christopher Robin!");
+            }
+    }
+
+    const tigger = {
+        character: "Tigger",
+        greet: function(){
+            console.log("Tiggers are wonderful!");
+            }
+    }
+
+    const piglet = {
+        character: "Piglet",
+        greet: function(){
+            console.log("Oh, I'm so worried!");
+            }
+    }
+
+    const owl = {
+        character: "Owl",
+        greet: function(){
+            console.log("Hoot Hoot, How are ya?");
+            }
+    }
+
+    const bees = {
+        character: "Bees",
+        greet: function(){
+            console.log("Buzzzzzzzzz buzz buzz buzzzzzzzy buz!");
+            }
+    }
+
+    const rabbit = {
+        character: "Rabbit",
+        greet: function(){
+            console.log("Did you happen to bring any carrots?");
+            }
+    }
+
+    const heffalumps = {
+        character: "Heffalumps",
+        greet: function(){
+            console.log("I'm a scarrryyyy monster!");
+            }
+    }
+
+    const gopher = {
+        character: "Gopher",
+        greet: function(){
+            console.log("Dirt tastes great today!");
+            }
+    }
+
+    eeyore.south = kanga;
+    eeyore.east = heffalumps;
+
+    winnie.north = chris;
+    winnie.east = bees;
+    winnie.south = tigger;
+    winnie.west = piglet;
+
+    kanga.north = eeyore;
+    kanga.south = chris;
+
+    chris.north = kanga;
+    chris.south = winnie;
+    chris.east = rabbit;
+    chris.west = owl;
+
+    tigger.north = winnie;
+
+    piglet.north = owl;
+    piglet.east = winnie;
+
+    owl.east = winnie;
+    owl.south = piglet;
+
+    count = 0;
+    
+    let player = {
+        character: tigger,
+        move: function(direction){
+            // console.log(this);
+            if(direction == "north" && this.character.north != undefined) {
+                console.log(`Moving from ${this.character.character} to ${this.character.north.character}`)
+                this.character = this.character.north;
+                console.log(this.character.greet);
+                count += 1;
+            }
+            else if(direction == "east" && this.character.east != undefined) {
+                console.log(`Moving from ${this.character.character} to ${this.character.east.character}`)
+                this.character = this.character.east;
+                console.log(this.character.greet);
+                count += 1;
+            }
+            else if(direction == "south" && this.character.south != undefined) {
+                console.log(`Moving from ${this.character.character} to ${this.character.south.character}`)
+                this.character = this.character.south;
+                console.log(this.character.greet);
+                count += 1;
+            }
+            else if(direction == "west" && this.character.west != undefined) {
+                console.log(`Moving from ${this.character.character} to ${this.character.west.character}`)
+                this.character = this.character.west;
+                console.log(this.character.greet);
+                count += 1;
+            } else {
+                console.log("You can not move your pointer in that direction");
+                
+            }
+        }
+    };
+
+
+
+    player.move("north");
+    player.move("south");
+    player.move("south");
+    player.move("north");
+    player.move("east");
+
+    if(count > 3){
+        console.log("You accomplished your goal of visiting 3 friends today!")
+    };
+    
+
+
+
+    </script>

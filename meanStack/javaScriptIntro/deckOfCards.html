@@ -1,0 +1,130 @@
+<script>
+
+class Card{
+    constructor(suit, value){
+        this.suit = suit;
+        this.value = value;
+        let suitVal;
+        let valVal;
+
+        switch(suit) {
+            case 0:
+                suitVal = "Hearts";
+                break;
+            case 1:
+                suitVal = "spades";
+                break;
+            case 2:
+                suitVal = "Diamonds";
+                break;
+            case 3:
+                suitVal = "Clubs";
+                break;
+            default:
+                break;
+        }
+
+        switch(value) {
+            case 1:
+                valVal = "Ace";
+                break;
+            case 11:
+                valVal = "Jack";
+                break;
+            case 12:
+                valVal = "Queen";
+                break;
+            case 13:
+                valVal = "King";
+                break;
+            default:
+                valVal = value;
+                break;
+            }
+        this.strVal = `${valVal} of ${suitVal}`;
+    }
+
+    showCard(){
+        return this.strVal;
+    }
+}
+
+class Deck{
+    constructor(){
+        this.deck = [];
+        this.reset();
+        this.shuffle();
+    }
+
+    reset() {
+        //create deck
+        for(let suit = 0; suit < 4; suit++){
+            for(let value = 1; value < 14; value++){
+                //create new card and push to the deck.
+                this.deck.push(new Card(suit, value));
+            }
+        }
+    }
+
+    shuffle(){
+        for(let i = 0; i < this.deck.length; i++){
+            let randInt = Math.floor(Math.random() * this.deck.length);
+            let swap = this.deck[randInt];
+            this.deck[randInt] = this.deck[i];
+            this.deck[i] = swap;
+
+        }
+    }
+
+    deal(){
+        return this.deck.pop();
+    }
+
+    displayDeck(){
+        for(let card of this.deck){
+            console.log(card.showCard());
+        }
+    }
+}
+
+
+class Player {
+    constructor(name){
+        this.name = name;
+        this.hand = [];
+    }
+
+    draw(deck){
+        this.hand.push(deck.deal());
+    }
+
+    discard(cardIndex) {
+    this.hand.splice(cardIndex, 1);
+    }
+}
+
+let players = ["Jay", "Jaden", "Kevin", "Josh", "Matt"];
+
+let myDeck = new Deck();
+
+let game = [];
+// a game with players
+for(let player of players) {
+  game.push(new Player(player));
+}
+// give each play 2 cards from the deck
+for(let p of game) {
+  for(let i = 0; i < 2; i++) {
+    p.draw(myDeck);
+  }
+}
+// loop through the players of the game, and display their hand
+for(let p of game) {
+  console.log(p.name);
+  console.log(`\t Hand:`)
+  for(let c of p.hand) {
+    console.log(`\t\t ${c.showCard()}`);
+  }
+}
+
+</script>

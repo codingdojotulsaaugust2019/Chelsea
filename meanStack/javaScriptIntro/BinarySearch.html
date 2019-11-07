@@ -1,0 +1,40 @@
+<script>
+
+function binarySearch(arr, x){
+
+    var line = Math.floor(arr.length/2);
+    var start = 0;
+    var end = arr.length-1;
+
+    while(start + 1 != end){
+
+        if(x < arr[line] ){
+            end = line;
+            if(arr[end] == x){
+                return true;
+            }
+        }
+    
+        else{
+            start = line;
+            if(arr[start] == x){
+                return true;
+            }
+        }
+
+        var len = end - start;
+        var half = Math.floor(len/2);
+        line = start + half;
+        if(arr[line] == x){
+            return true;
+        }
+    }
+    return false;
+}
+
+
+
+arr = [0,2,4,6,8,10,12,15,16,18,20];
+console.log(binarySearch(arr, 12));
+
+</script>

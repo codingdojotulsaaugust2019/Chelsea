@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Form</title>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type ="text/javascript">
+
+    $(document).ready(function (){
+    
+    var socket = io(); //1
+
+    
+    $('Submit').click(function(){
+        //socket.emit('form', {msg : `Submitted name is: ${$('#name').val()}.`});
+        console.log($('#name').val());
+    });
+    
+    socket.on('greeting', function (data) { //4
+        alert(data.msg); //5
+        socket.emit('thankyou', { msg: 'Thank you for connecting me! -Client' }); //6
+    });
+ })
+
+</script>
+
+<body>
+
+<div class="container">
+
+    <h1 class="display-4">Here's a nice form...</h1>
+        <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <select id="location">
+                        <option class="form-control" value="Tulsa">Tulsa</option>
+                        <option class="form-control" value="Chicago">Chicago</option>
+                        <option class="form-control" value="New York">New York</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Favorite Language</label>
+                    <select id="language">
+                        <option class="form-control" value="JavaScript">JavaScript</option>
+                        <option class="form-control" value="C#">C#</option>
+                        <option class="form-control" value="Python">Python</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Comments</label>
+                    <textarea id="comment" cols="30" rows="10"></textarea>
+                </div>
+                <button id="Submit">Submit</button>
+            </form>
+</div>
+    
+
+</body>
+</html>
