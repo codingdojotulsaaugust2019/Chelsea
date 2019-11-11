@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class="display-4">Restful Tasks API</h1>
+
+  <h2>Here is my One task:</h2>
+  <p>{{theTask.title}} - {{theTask.description}}</p>
+
+  <h2>Here is my list of tasks:</h2>
+  <p *ngFor="let task of tasks">{{task.title}} - {{task.description}}</p>
+</div>

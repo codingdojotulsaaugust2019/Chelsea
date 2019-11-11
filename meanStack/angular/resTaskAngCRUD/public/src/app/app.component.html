@@ -1,0 +1,91 @@
+
+<div class="container">
+
+    <h1 class="display-4">Restful Tasks API</h1>
+
+    <button (click)="TasksButton()" class="btn btn-primary">Show All Tasks</button>
+
+    <div>
+
+      <p>New Task:</p>
+      <div *ngIf="errors">
+        <p>******** {{errors | json}} **********</p>
+      </div>
+
+      <form (submit)="onSubmit()">
+          <p> {{ newTask | json }} </p>
+          <div class="form-group">
+              <label>Title:</label>
+              <input type="text" class="form-control" name="title" [(ngModel)]="newTask.title">
+          </div>
+          <div class="form-group">
+            <label>Description:</label>
+            <input type="text" class="form-control" name="description" [(ngModel)]="newTask.description">
+          </div>
+          <input type="submit" class="btn btn-primary" value="Add!">
+      </form>
+
+    </div>
+
+    <div *ngIf="editstat == true">
+
+        <p>Edit Task:</p>
+  
+        <form (submit)="onEdit()">
+
+            <p> {{ editTask | json }} </p>
+
+            <div class="form-group">
+                <label>Title:</label>
+                <input type="text" class="form-control" name="title" [(ngModel)]="editTask.title">
+            </div>
+
+            <div class="form-group">
+                <label>Description:</label>
+                <input type="text" class="form-control" name="description" [(ngModel)]="editTask.description">
+            </div>
+
+                <input type="hidden" name="_id" [(ngModel)]="editTask._id">
+
+            <input type="submit" class="btn btn-primary" value="Update!">
+
+      </form>
+
+    </div>
+
+    
+    
+      
+  
+  <div *ngIf="tasks.length > 0">
+    
+    <div *ngFor="let task of tasks" class="container border-light p-3">
+
+      <div class="border border-dark">
+
+            <p class="font-weight-bold">{{task.title}}</p>
+
+            <div *ngIf="ShowTaskDetail.includes(task._id)">
+                <p class="font-italic">{{task.description}}</p>
+                <button class="btn btn-danger m-1" (click)="onDelete(task._id)">Delete</button>
+                <button class="btn btn-info m-1" (click)="onEditButton(task._id)">Edit</button>
+            </div>
+
+            <div *ngIf="!ShowTaskDetail.includes(task._id)">
+                  <button (click)="TaskShowButton(task._id)" class="btn btn-primary m-1">Show</button>
+            </div>
+
+            <div *ngIf="ShowTaskDetail.includes(task._id)">
+                  <button (click)="TaskShowButton(task._id)" class="btn btn-primary m-1">Hide</button>
+            </div>
+            
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  
+</div>
+
+<router-outlet></router-outlet>
